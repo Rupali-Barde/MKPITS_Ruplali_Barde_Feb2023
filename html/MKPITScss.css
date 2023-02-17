@@ -1,0 +1,30 @@
+a{
+text-decoration:none;
+color:black;
+font-size:22px;
+font-family:"Poppins",sans-serif;
+}
+td{
+word-spacing:40px;
+padding-top:10px;
+padding-left:7px;
+}
+.main{
+color:white;
+background-image:url('pexels-kevin-ku-577585.jpg');
+
+}
+.main h1{
+font-size:60px;
+font-family:"Raleway",sans-serif;
+}
+
+img{
+font-size:25px;
+}
+
+.main p{
+font-size:25px;
+font-family:"Raleway",sans-serif;
+}
+
