@@ -1,0 +1,28 @@
+<html>
+<script language="javascript">
+function Info()
+{
+var fname,lname,email,mobnum;
+fname=document.getElementById("fn").value;
+lname=document.getElementById("ln").value;
+email=document.getElementById("em").value;
+mobnum=document.getElementById("mob").value;
+
+document.getElementById("out").innerHTML="First Name: "+fname;
+document.getElementById("out1").innerHTML="Last Name :"+lname;
+document.getElementById("out3").innerHTML="Email Id :"+email;
+document.getElementById("out4").innerHTML="Mobile Number :"+mobnum;
+}
+</script>
+<body>
+First Name :<input type="text" id="fn"><br><br>
+Last Name :<input type="text" id="ln"><br><br>
+Email :<input type="text" id="em"><br><br>
+Mobile No.:<input type="number" id="mob"><br><br>
+<input type="button" value="Submit" onclick="Info();"><br><br>
+<span id="out"></span><br><br>
+<span id="out1"></span><br><br>
+<span id="out3"></span><br><br>
+<span id="out4"></span>
+</body>
+</html>

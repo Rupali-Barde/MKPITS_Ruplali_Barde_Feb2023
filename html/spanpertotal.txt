@@ -1,0 +1,42 @@
+<html>
+<body>
+math:<input type "text" id="math" /><br><br>
+phy:<input type "text" id="phy" /><br><br>
+che:<input type "text" id="che" /><br><br>
+<input type ="button" value ="result" onclick ="result();">
+<br>
+<span id = "Total"> Total: </span><br>
+<span id = "Percentage"> Percentage: </span>
+</body>
+
+<script language="javascript">
+
+function total()
+{
+var math,phy,che,total;
+math =parseInt(document.getElementById("math").value);
+phy=parseInt(document.getElementById("phy").value);
+che =parseInt(document.getElementById("che").value);
+
+total=math+phy+che;
+document.getElementById("total").innerHTML = "total": + total;
+}
+
+function percent()
+{
+var math,phy,che,percent;
+math = ("document.getElementById("math").value);
+phy = ("document.getElementById("phy").value);
+che = ("document.getElementById("che").value);
+
+percent=(total/300)*100;
+document.getElementById("Percentage").innerHTML = "Percentage": + Percentage;
+}
+
+</script>
+</html>
+
+
+
+
+

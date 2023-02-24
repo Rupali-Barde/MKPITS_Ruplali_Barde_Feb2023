@@ -1,0 +1,24 @@
+<html>
+<body>
+enter maths=<input type="text" id="n1"><br>
+enter phy=<input type="text" id="n2"><br>
+enter chem=<input type="text" id="n3"><br>
+<input type="button" value="add" onclick="addNum();">
+<span id= "res"> result: </span>
+<span id= "per"> percentage: </span>
+</body>
+<script language="javascript">
+function addNum()
+{
+var maths,phy,chem,result,percentage;
+maths=parseInt(document.getElementById("n1").value);
+phy=parseInt(document.getElementById("n2").value);
+chem=parseInt(document.getElementById("n3").value)
+result=maths+phy+chem;
+percentage=(result/300)*100;
+document.getElementById("res").innerHTML="result=" +result;
+document.getElementById("per").innerHTML="percentage="+percentage;
+}
+</script>
+</html>
+

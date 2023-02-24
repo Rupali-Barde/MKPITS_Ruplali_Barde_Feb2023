@@ -1,0 +1,27 @@
+<html>
+   <body>
+length: <input type "text" id="length" /><br><br>
+breadth: <input type "text" id="breadth" />
+
+<input type="button" value="area" onclick="area();" >
+<span id ="Area"> area:</span>
+</body>
+
+<script language ="javascript">
+function area ()
+{
+var length,breadth,area;
+length=parseInt(document.getElementById("length").value); 
+ breadth=parseInt(document.getElementById("breadth").value); 
+
+area=length*breadth;
+document.getElementById("Area").innerHTML="Area" + area;
+}
+
+
+</script>
+
+</html>
+ 
+ 
+ 
