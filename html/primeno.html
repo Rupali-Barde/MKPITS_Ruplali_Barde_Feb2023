@@ -1,0 +1,32 @@
+<html>
+   
+<body>
+Enter Num<input type="text" id="n"><br><br>
+<input type="button" value="submit" onclick="check()"; />
+</body>
+
+   <script>
+function check()
+{
+var num=parseInt(document.getElementById("n").value);
+var counter
+var flag=0;
+for(counter=0;counter<num;counter++)
+{
+if(num%counter==0)
+{
+flag=1;
+break;
+}
+}
+if(flag==0)
+{
+alert("prime")
+}
+else
+{
+alert("number is not prime")
+}
+}
+</script>
+</html>
