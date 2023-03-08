@@ -1,0 +1,29 @@
+<html>
+<form method=post action="login.aspx" onsubmit="return check();">
+username:<input type="text" id="un"/><br><br>
+password:<input type="text" id="pwd" /><br><br>
+<input type="submit" value="submit"  />
+</form>
+    <script>
+function check()
+{
+ username=document.getElementById("un").value;
+ password=document.getElementById("pwd").value;
+    if(username=="" && password=="")
+{
+alert("please enter user name or password");
+  return false;
+}
+else if(pwd.length<6)
+{
+alert("password must be at least 6 char");
+return false;
+}
+else
+{
+alert("welcome"+ username);
+}
+}
+</script>
+</html>
+  
