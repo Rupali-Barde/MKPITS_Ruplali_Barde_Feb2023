@@ -1,0 +1,14 @@
+<html>
+<body>
+fahrenheit:<input type="text" id="f1">
+<input type="button" value="ok" onclick="cel();"/>
+</body>
+   <script>
+function cel()
+{
+var celcius=parseInt(document.getElementById("f1").value);
+var fahrenheit=(celcius*1.8)+32
+document.write(celcius+ "degree celcius is equal to"+fahrenheit+"degree fahrenheit");
+}
+</script>
+</html>

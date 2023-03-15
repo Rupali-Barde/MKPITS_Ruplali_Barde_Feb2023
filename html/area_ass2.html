@@ -1,0 +1,19 @@
+<html>
+<body>
+Enter length:<input type="text" id="len">
+Enter width:<input type="text" id="wid">
+<input type="button" value="area" onclick="area();"/>
+<span> area </span>
+</body>
+<script>
+function area()
+{
+var length,width,area;
+length=parseInt(document.getElementById("len").value);
+width=parseInt(document.getElementById("wid").value);
+area=length*width;
+document.getElementById("area");
+alert("Area is " + area);
+}
+</script>
+</html>
