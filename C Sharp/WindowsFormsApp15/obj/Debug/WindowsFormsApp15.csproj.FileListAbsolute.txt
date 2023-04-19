@@ -1,0 +1,11 @@
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe.config
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.exe
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\bin\Debug\WindowsFormsApp15.pdb
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.csproj.AssemblyReference.cache
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.csproj.SuggestedBindingRedirects.cache
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Form1.resources
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.Properties.Resources.resources
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.csproj.GenerateResource.cache
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.csproj.CoreCompileInputs.cache
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.exe
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\WindowsFormsApp15\obj\Debug\WindowsFormsApp15.pdb
