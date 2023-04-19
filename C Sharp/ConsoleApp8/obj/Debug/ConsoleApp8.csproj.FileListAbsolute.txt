@@ -1,0 +1,8 @@
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\bin\Debug\ConsoleApp8.exe.config
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\bin\Debug\ConsoleApp8.exe
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\bin\Debug\ConsoleApp8.pdb
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\obj\Debug\ConsoleApp8.csproj.AssemblyReference.cache
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\obj\Debug\ConsoleApp8.csproj.SuggestedBindingRedirects.cache
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\obj\Debug\ConsoleApp8.csproj.CoreCompileInputs.cache
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\obj\Debug\ConsoleApp8.exe
+E:\DotNet\MKPITS_Ruplali_Barde_Feb2023\C Sharp\ConsoleApp8\obj\Debug\ConsoleApp8.pdb
