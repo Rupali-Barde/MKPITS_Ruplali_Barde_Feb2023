@@ -1,0 +1,1 @@
+insert into student values (16 ,'anu','nagpur',9730925638)
