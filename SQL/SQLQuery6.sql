@@ -1,7 +1,9 @@
+select * from brand
+insert into brand values(111,'tata')
+insert into brand values(112,'honda')
+insert into brand values(113,'suzuki')
+insert into brand values(114,'mahindra')
+insert into brand values(115,'hyundai')
 
-
-select * from employee 
-select * from employee order by empname desc
-select * from employee
-alter table employee1 change column empadd to lastname varchar(20)
-select * from employee1
+select * from product
+insert into product values(201, 'car',111,101,2012,250000,20000)
