@@ -13,9 +13,16 @@ namespace WebApplication5
         {
 
         }
-
+        double Balance = 1000;
         protected void Button1_Click(object sender, EventArgs e)
         {
+            double AccountNo= Convert.ToDouble(TextBox1.Text);
+            double Amount =Convert.ToDouble (TextBox2.Text);
+
+            if(TextBox3.Text == "Deposite")
+            {
+                Balance = Amount + Balance;
+            }
 
         }
     }
