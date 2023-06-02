@@ -50,5 +50,10 @@ namespace WebPage10
             }
             Label1.Text = sb.ToString();    
         }
+
+        protected void Button1_Click1(object sender, EventArgs e)
+        {
+
+        }
     }
 }

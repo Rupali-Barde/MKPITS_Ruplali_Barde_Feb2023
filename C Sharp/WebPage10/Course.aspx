@@ -6,7 +6,13 @@
 <head runat="server">
     <title></title>
     <h1 class="auto-style2"> MKPITS SOLUTIONS </h1>
+          
+        
+        
     <style type="text/css">
+        body{
+            background-color : aqua;
+        }
         .auto-style1 {
             width: 100%;
         }
@@ -27,6 +33,7 @@
 </head>
 <body>
     <form id="form1" runat="server">
+        
         <div>
             <table class="auto-style1">
                 <tr>
@@ -73,7 +80,7 @@
                 <tr>
                     <td class="auto-style4">&nbsp;</td>
                     <td>
-                        <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="OK" Width="98px" />
+                        <asp:Button ID="Button1" runat="server" Height="32px" OnClick="Button1_Click1" Text="Ok" Width="99px" />
                     </td>
                 </tr>
             </table>
@@ -81,6 +88,7 @@
         <p>
             Result :<asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
         </p>
+        <asp:Image ID="Image1" runat="server" Height="212px" ImageUrl="download.png" Width="158px" />
     </form>
 </body>
 </html>
