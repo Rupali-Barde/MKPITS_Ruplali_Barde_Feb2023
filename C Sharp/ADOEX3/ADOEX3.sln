@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ADOEX3", "ADOEX3.csproj", "{24D30148-E80D-4EE3-B58B-043A642C61EB}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{24D30148-E80D-4EE3-B58B-043A642C61EB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24D30148-E80D-4EE3-B58B-043A642C61EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24D30148-E80D-4EE3-B58B-043A642C61EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24D30148-E80D-4EE3-B58B-043A642C61EB}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {E500A006-DB37-4AC2-AD42-F59F6BB6A981}
+	EndGlobalSection
+EndGlobal
