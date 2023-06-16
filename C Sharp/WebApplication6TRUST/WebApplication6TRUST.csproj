@@ -182,6 +182,7 @@
     <Content Include="Scripts\WebForms\WebParts.js" />
     <Content Include="Scripts\WebForms\WebUIValidation.js" />
     <Content Include="Site.Master" />
+    <Content Include="Transaction_Details.aspx" />
     <Content Include="Vendor.aspx" />
     <Content Include="ViewSwitcher.ascx" />
     <Content Include="Web.config" />
@@ -243,6 +244,13 @@
     </Compile>
     <Compile Include="Site.Mobile.Master.designer.cs">
       <DependentUpon>Site.Mobile.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction_Details.aspx.cs">
+      <DependentUpon>Transaction_Details.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Transaction_Details.aspx.designer.cs">
+      <DependentUpon>Transaction_Details.aspx</DependentUpon>
     </Compile>
     <Compile Include="Vendor.aspx.cs">
       <DependentUpon>Vendor.aspx</DependentUpon>
