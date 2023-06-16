@@ -1,11 +1,11 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="Vendor.aspx.cs" Inherits="Vendor_Mast1.Vendor" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Site2.Master" AutoEventWireup="true" CodeBehind="Department_Mast.aspx.cs" Inherits="Vendor_Mast1.Department_Mast" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
     <style type="text/css">
         .auto-style2 {
             width: 100%;
         }
         .auto-style3 {
-            width: 393px;
+            width: 782px;
         }
     </style>
 </asp:Content>
@@ -13,13 +13,13 @@
     <p>
         <table class="auto-style2">
             <tr>
-                <td class="auto-style3">Vendor_Id</td>
+                <td class="auto-style3">Department_Id</td>
                 <td>
                     <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
-                <td class="auto-style3">Vendor_Name</td>
+                <td class="auto-style3">Department_Name</td>
                 <td>
                     <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
                 </td>
@@ -27,16 +27,15 @@
         </table>
         <br />
         <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Save" />
+&nbsp;<asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modify" />
 &nbsp;
-        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Modify" />
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Delete" />
 &nbsp;
-        <asp:Button ID="Button3" runat="server" Text="Delete" OnClick="Button3_Click" />
-&nbsp;
-        <asp:Button ID="Button4" runat="server" Text="Search" OnClick="Button4_Click" />
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Search" />
     </p>
     <p>
         <asp:Label ID="Label1" runat="server" Text="Label"></asp:Label>
-    </p>
+&nbsp;</p>
     <p>
     </p>
 </asp:Content>

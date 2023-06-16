@@ -43,7 +43,10 @@
   <ItemGroup>
     <Compile Include="Class1.cs" />
     <Compile Include="DBConnection1.cs" />
+    <Compile Include="Department_Mast.cs" />
+    <Compile Include="Item_Master.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Transaction_Detail.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

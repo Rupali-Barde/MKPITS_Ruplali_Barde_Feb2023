@@ -15,7 +15,7 @@ namespace StoreLibrary
         public static SqlConnection getConnection()
         {
             con = new SqlConnection("server=.\\sqlexpress;integrated security=true;database=trust");
-            con.Open();
+            //con.Open();
             return con;
         }
     }

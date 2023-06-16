@@ -5,29 +5,32 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data;
 using System.Data.SqlClient;
-using System.Diagnostics.Eventing.Reader;
-
 namespace StoreLibrary
 {
-    public static class VendorClass
+    public static class Item_Master
     {
+
         //Connection
         static SqlConnection con = DBConnection1.getConnection();
         static string query = null;
         static SqlCommand cmd = null;
-        //Method To Insert Record In Vendor Table
-        public static string insertVendor_Mast(string Vendor_Name)
+
+        //Method To Insert Record Into Item_Mast
+        public static string insertItem_Master(string Item_Name, string Category, int Rate, int Balance_Quantity)
         {
             string res = null;
             try
             {
-                query = "insert into Vendor_Mast values(@Vendor_Name)";
+                query = "insert into Item_Master values(@Department_Name,@Category,@Rate,@Balance_Quantity)";
                 cmd = new SqlCommand(query, con);
-                cmd.Parameters.AddWithValue("Vendor_Name", Vendor_Name);
+                cmd.Parameters.AddWithValue("Item_Name", Item_Name);
+                cmd.Parameters.AddWithValue("Category", Category);
+                cmd.Parameters.AddWithValue("Rate", Rate);
+                cmd.Parameters.AddWithValue("Balance_Quantity", Balance_Quantity);
                 con.Open();
                 cmd.ExecuteNonQuery();
                 //con.Close();
-                res = "Record Saved In Vendor Master Successfully";
+                res = "Record Saved In Item Master Successfully";
             }
             catch (Exception ex)
             {
@@ -40,55 +43,59 @@ namespace StoreLibrary
             return res;
         }
 
-        //Method To Return Vendor_Id
-        public static string getVendor_Id()
+        public static string getItem_Id()
         {
             string res = null;
             try
             {
-                query = "select max(Vendor_Id)from Vendor_Mast";
+                query = "select max(Item_Id) from Item_Master";
+
                 cmd = new SqlCommand(query, con);
                 con.Open();
                 int vid = Convert.ToInt32(cmd.ExecuteScalar());
+
                 res = vid.ToString();
             }
             catch (Exception ex)
             {
                 res = ex.ToString();
             }
+
             finally
             {
                 con.Close();
+
             }
             return res;
-
         }
-        //Method To Update Record In Vendor Table
-        public static string updateVendor_Mast(string Vendor_Name, int Vendor_Id)
+
+        //Method To Update The Record In Item Master
+        public static string updateItem_Master(string Item_Name, int Rate)
         {
             string res = null;
 
-            //Checking Whether VendorId Exist Or Not
-            query = "select count(*)from Vendor_Mast where Vendor_Id=@Vendor_Id";
-            cmd = new SqlCommand(query, con);
-            cmd.Parameters.AddWithValue("@Vendor_Id", Vendor_Id);
-            con.Open();
-            int cnt = Convert.ToInt32(cmd.ExecuteScalar());
-            con.Close();
+            //checking whether ItemId exists or not
+            //query = "select count(*) from Item_Master where Item_Id=@Item_Id";
+            //cmd = new SqlCommand(query, con);
+           // cmd.Parameters.AddWithValue("@Item_Id",Item_Id);
+            //con.Open();
+            //int cnt = Convert.ToInt32(cmd.ExecuteScalar());
+            //con.Close();
 
-            if (cnt > 0)
-            {
+            //if (cnt > 0)
+            //{
+
                 try
+
                 {
-                    query = "update Vendor_Mast set Vendor_Name=@Vendor_Name where Vendor_Id=@Vendor_Id";
+                    query = "update Item_Master set Item_Name=@Item_Name where Rate=@Rate";
                     cmd = new SqlCommand(query, con);
-                    cmd.Parameters.AddWithValue("@Vendor_Name", Vendor_Name);
-                    cmd.Parameters.AddWithValue("@Vendor_Id", Vendor_Id);
+                    cmd.Parameters.AddWithValue("@Item_Name",Item_Name);
+                    cmd.Parameters.AddWithValue("@Rate", Rate);
                     con.Open();
                     cmd.ExecuteNonQuery();
 
-                    res = "Record Updated in Vendor Master SuccessFully";
-
+                    res = "Record Updated In Item Master Successfully";
                 }
                 catch (Exception ex)
                 {
@@ -97,28 +104,22 @@ namespace StoreLibrary
                 finally
                 {
                     con.Close();
+
                 }
-
-            }
-            else
-            {
-                res = "No Record Exist";
-
-            }
-            return res;
+                  return res;
 
         }
 
-        //Method To Delete Record Into Vendor Master
-        public static string deleteVendor_Mast(int vendor_id)
+        //Method To Delete Record From Item Master
+        public static string deleteItem_Master(int Item_Id)
         {
             string res = null;
 
             //checking whether vendorid exists or not
-            query = "select count(*) from vendor_mast where vendor_id=@vendor_id";
+            query = "select count(*) from Item_Master where Item_Id=@Item_Id";
             cmd = new SqlCommand(query, con);
 
-            cmd.Parameters.AddWithValue("@vendor_id", vendor_id);
+            cmd.Parameters.AddWithValue("@Item_Id", Item_Id);
             con.Open();
             int cnt = Convert.ToInt32(cmd.ExecuteScalar());
             con.Close();
@@ -128,14 +129,14 @@ namespace StoreLibrary
 
                 try
                 {
-                    query = "delete from vendor_mast where vendor_id=@vendor_id";
+                    query = "delete from Item_Master where Item_Id=@Item_Id";
                     cmd = new SqlCommand(query, con);
 
-                    cmd.Parameters.AddWithValue("@vendor_id", vendor_id);
+                    cmd.Parameters.AddWithValue("@Item_Id", Item_Id);
                     con.Open();
                     cmd.ExecuteNonQuery();
 
-                    res = "record deleted in vendor master successfully";
+                    res = "Record Deleted In Item Master Successfully";
                 }
                 catch (Exception ex)
                 {
@@ -150,33 +151,27 @@ namespace StoreLibrary
             }
             else
             {
-                res = "no record exist ";
+                res = "No Record Exist ";
             }
             return res;
         }
 
-        //Method To Search The Record In Vendor_Mast
+        //method to search record in vendor master
 
-        public static DataSet searchVendor_mast(int vendor_id)
+        public static DataSet searchItem_Master(int Item_Id)
         {
 
-            query = "select * from vendor_mast where Vendor_Id=@Vendor_Id";
+            query = "select * from Item_Master where Item_Id=@Item_Id";
 
             DataSet ds = new DataSet();
             SqlDataAdapter da = new SqlDataAdapter(query, con);
-            da.SelectCommand.Parameters.AddWithValue("@Vendor_Id",vendor_id);
-            da.Fill(ds, "Vendor_Mast");
+            da.SelectCommand.Parameters.AddWithValue("@Item_Id",Item_Id);
+            da.Fill(ds, "Item_Master");
             return ds;
 
         }
-
-
-
-
-
     }
 
 }
-        
-      
+
 
