@@ -1,4 +1,5 @@
-﻿using System;
+﻿using StoreLibrary;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -40,7 +41,13 @@ namespace Vendor_Mast1
         {
             if(RadioButton1.Checked)
             {
-                string res = Transaction_Details.TransactionIssue(Convert.ToInt32)
+                string res = Transaction_Detail.TransactionIssue(Convert.ToInt32(DropDownList1.Text), DateTime.Today, Convert.ToInt32(DropDownList2.Text), Convert.ToInt32(TextBox3.Text));
+                Label3.Text = "Inserted Data";
+            }
+            else if(RadioButton2.Checked) 
+            {
+                string res = Transaction_Detail.TransactionIssue(Convert.ToInt32(DropDownList1.Text), DateTime.Today, Convert.ToInt32(DropDownList3.Text), Convert.ToInt32(TextBox3.Text));
+                Label3.Text = "Inserted Data";
             }
         }
     }
