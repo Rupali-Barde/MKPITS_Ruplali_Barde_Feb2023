@@ -80,9 +80,9 @@ namespace Driven_IT
         protected void Button2_Click(object sender, EventArgs e)
         {
             int updatedqty = 0;
-            Response.Write("transaction id"+transid.ToString());
-            updatedqty = Convert.ToInt32(TextBox1.Text) - oldtransqty;
-            Response.Write("updated qty" + updatedqty.ToString());
+            //Response.Write("transaction id"+transid.ToString());
+            
+            //Response.Write("updated qty" + updatedqty.ToString());
 
             try
             {
@@ -102,7 +102,7 @@ namespace Driven_IT
                     command.Parameters.AddWithValue("@TransType",trans);
                     command.Parameters.AddWithValue("@TransQty",Convert.ToInt32(TextBox1.Text));
                     command.Parameters.AddWithValue("@TransDate",TextBox2.Text);
-                command.Parameters.AddWithValue("@TransId",transid);
+                    command.Parameters.AddWithValue("@TransId",transid);
                     con.Open();
                     command.ExecuteNonQuery();
 
@@ -111,46 +111,48 @@ namespace Driven_IT
                     command = new SqlCommand(query, con);
                     command.Parameters.AddWithValue("@ItemId", DropDownList1.SelectedValue);
                     int bq = Convert.ToInt32(command.ExecuteScalar());
-                    Response.Write("bq" + bq.ToString());
-                    Response.Write("updateqty" + updatedqty.ToString());
+                    updatedqty = Convert.ToInt32(TextBox1.Text) - oldtransqty;
+                //Response.Write("bq" + bq.ToString());
+                    Response.Write("<br>updateqty" + updatedqty.ToString());
                 if (RadioButton1.Checked)
+                {
                     bq = bq - updatedqty;
-                if(RadioButton2.Checked)
+                }
+                if (RadioButton2.Checked)
+                {
                     bq = bq + updatedqty;
+                }
                 Response.Write("<br>newupdatedqty"+ bq.ToString());
                 if (bq < 0)
                 {
                     Label1.Text = "Stock Not Available";
                 }
                 else
-
-
-                        
-
-
-               // if (trans == "I")
-               // {
-                  //  bq = bq - Convert.ToInt32(TextBox1.Text);
-              //  }
-               // else if (trans == "R")
-               // {
+                {
+                    // if (trans == "I")
+                    // {
+                    //  bq = bq - Convert.ToInt32(TextBox1.Text);
+                    //  }
+                    // else if (trans == "R")
+                    // {
                     //bq = bq + Convert.ToInt32(TextBox1.Text);
-                //}
+                    //}
 
 
-                        //updating bal qty on item master table
-                        query = "update ItemMaster set BalQty=@BalQty where ItemId=@ItemId";
-                        command = new SqlCommand(query, con);
-                        command.Parameters.AddWithValue("@BalQty", bq);
-                        command.Parameters.AddWithValue("@ItemId", DropDownList1.SelectedValue);
-                        command.ExecuteNonQuery();
-                        Label1.Text = "Record Updated Successfully";
+                    //updating bal qty on item master table
+                    query = "update ItemMaster set BalQty=@BalQty where ItemId=@ItemId";
+                    command = new SqlCommand(query, con);
+                    command.Parameters.AddWithValue("@BalQty", bq);
+                    command.Parameters.AddWithValue("@ItemId", DropDownList1.SelectedValue);
+                    command.ExecuteNonQuery();
+                    Label1.Text = "Record Updated Successfully";
+                }
             }
-                    catch(Exception ex)
-                   { 
-                        Label1.Text = ex.ToString();
-                    }
-                    finally
+            catch(Exception ex)
+            { 
+               Label1.Text = ex.ToString();
+            }
+            finally
             {
                 con.Close();
             }
