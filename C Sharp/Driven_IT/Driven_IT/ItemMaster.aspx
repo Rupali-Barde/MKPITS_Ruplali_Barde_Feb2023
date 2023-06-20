@@ -50,7 +50,7 @@
     <p>
         &nbsp;</p>
     <p>
-        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TransId" DataSourceID="SqlDataSource3">
+        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="TransId" DataSourceID="SqlDataSource3" OnSelectedIndexChanged="GridView1_SelectedIndexChanged1">
             <Columns>
                 <asp:CommandField ShowDeleteButton="True" ShowEditButton="True" ShowSelectButton="True" />
                 <asp:BoundField DataField="TransId" HeaderText="TransId" InsertVisible="False" ReadOnly="True" SortExpression="TransId" />
