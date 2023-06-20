@@ -203,6 +203,22 @@ namespace Driven_IT
             }
             transid = Convert.ToInt32(GridView1.SelectedRow.Cells[1].Text);
         }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            query = "delete from Transactions where TransId=@TransId";
+            SqlCommand command = new SqlCommand(query, con);
+
+            command.Parameters.AddWithValue("@TransId", transid);
+
+            con.Open();
+            command.ExecuteNonQuery();
+            con.Close();
+            Label1.Text = "Record Deleted";
+            //TextBox1.Text = "";
+            //TextBox1.Focus();
+            
+        }
     }
 
 
