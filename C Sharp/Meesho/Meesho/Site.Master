@@ -6,7 +6,7 @@
 <head runat="server">
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title><%: Page.Title %> - My ASP.NET Application</title>
+    <title><%: Page.Title %> - meesho</title>
 
     <asp:PlaceHolder runat="server">
         <%: Scripts.Render("~/bundles/modernizr") %>
@@ -36,28 +36,21 @@
                 <%--Site Scripts--%>
             </Scripts>
         </asp:ScriptManager>
-
+       
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark bg-dark">
             <div class="container">
-                <a class="navbar-brand" runat="server" href="~/">Meesho</a>
-
-                
-                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" title="Toggle navigation" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
                 <div class="collapse navbar-collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item"><a class="nav-link" runat="server" href="~/">Home</a></li>
+                  <ul class="navbar-nav flex-grow-1">
+                      <li class="nav-item"><a class="nav-link" runat="server" href="Default.aspx">Meesho</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Women">Women</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Men">Men</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Kids">Kids</a></li>
                         <li class="nav-item"><a class="nav-link" runat="server" href="~/Home & Kitchen">Home & Kitchen</a></li>
-
-
-
-
-
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Beauty & Health">Beauty & Health</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Jwellary & Accesories">Jwellary & Accesories</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Bags & Footwear">Bags & Footwear</a></li>
+                        <li class="nav-item"><a class="nav-link" runat="server" href="~/Electronics">Electronics</a></li>
+                        
 
                     </ul>
                 </div>

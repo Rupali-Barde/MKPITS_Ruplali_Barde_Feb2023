@@ -34,10 +34,13 @@ Best Quality Shopping </h2>
         <div align="center"> 
             <asp:DataList ID="DataList1" runat="server" RepeatColumns="4" Width="100%">
             <ItemTemplate>
-                <table cellpadding="2" cellspacing="0" border="1" style="width: 300px; height: 100px; border: dashed 2px #04AFEF; background-color: #FFFFFF">
+                <table cellpadding="2" cellspacing="0" border="1" style="width: 300px; height: 100px;  background-color: #FFFFFF">
                     <tr>
                         <td align="center">
+                         <a href='<%# Eval("ProdId","productdetails.aspx?ProdId={0}") %>'>
                         <asp:Image ID="Image1" ImageUrl='<%# Bind("Prodimage", "~/imageprod/{0}") %>' runat="server" Height="100" Width="100" />
+                             </a>
+                        
 
                         </td>
                     </tr>
