@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+@*If-Else*@
+
+@{
+    var val = 102;
+}
+
+    @if(val%2 == 0)
+    {
+     <p> The Value Is Even</p>
+    }
+    else
+    {
+        <p> The Value Is Odd</p>
+    }
+
+@*    Valid Password Code*@
+
+@{
+    var username = "admin";
+    var pass = "admin";
+}
+@if(username=="admin" && pass=="admin")
+{
+    <p>Login Successfull</p>
+}
+else
+{
+    <p>Invalid Username And Password</p>
+}
