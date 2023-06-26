@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Index";
+}
+<h2> Calculate</h2>
+
+@model WebApplication12.Models.Calculate
+
+@using (Html.BeginForm("Index","Calculate",FormMethod.Post))
+{
+    <h1> Addition Form</h1>
+
+    <b>Enter Number 1</b>
+    @Html.TextBoxFor(m=> m.num1,new
+    {
+        @Value = "Enter Num1",
+        @class ="red",
+    })
+
+    <br/>
+    <br/>
+
+    <b>Enter Number 2</b>
+    @Html.TextBoxFor(m=> m.num2,new
+    {
+        @Value = "Enter Num2",
+        @class ="red",
+    })
+    <br/>
+    <br/>
+
+    <input type = "Submit" value="Calculate" />
+}
+<h3> Calculation Results :</h3>
+Result:@ViewBag.result
+<br/>
+<br/>

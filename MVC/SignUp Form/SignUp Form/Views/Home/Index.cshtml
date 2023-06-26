@@ -1,0 +1,27 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+@*Loosely Bound*@
+
+  @using (Html.BeginForm("Index","Home",FormMethod.Post))
+ {
+   <b> Name:</b> @Html.TextBox("Name","Enter Name",new{style="Color:black"})
+ }
+
+
+@*Strongly Bound*@
+
+ @model SignUp_Form.Models.UserModel
+ @using(Html.BeginForm("Index","Home",FormMethod.Post))
+{
+   <b> Name:</b>
+   @Html.TextBoxFor(m=>m.Name,new{@value="Enter Name"})
+}
