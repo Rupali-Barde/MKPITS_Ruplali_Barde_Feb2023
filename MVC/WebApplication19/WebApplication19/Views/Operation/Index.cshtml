@@ -1,0 +1,28 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@model WebApplication19.Models.Operation
+@using (Html.BeginForm("Index","Operation",FormMethod.Post))
+{
+    <b> Do Calculation</b>
+    <br/>
+    <span>number1:</span> @Html.TextBoxFor(m=>m.num1)
+    <br/>
+    <span>number2:</span> @Html.TextBoxFor(m=>m.num2)
+    <br/>
+    <span>add</span> @Html.CheckBoxFor(m=>m.add,true)
+    <br/>
+    <span>subtract</span>@Html.CheckBoxFor(m=>m.subtract,false)
+    <br/>
+    <span>multiply</span>@Html.CheckBoxFor(m=>m.multiply,false)
+    <br/>
+    <input type="submit" value="OK"/>
+}
+<h3>Calculation Result</h3>
+<b>Addition:</b>@ViewBag.result1
+<br/>
+<b>Subtraction:</b>@ViewBag.result2
+<br/>
+<b>Multiply:</b>@ViewBag.result3

@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+@model WebApplication20.Models.Radiobutton
+@using(Html.BeginForm("index","Radiobutton",FormMethod.Post))
+{
+    <b>Do Calculation</b>
+    <br/>
+    <span>num1:</span> @Html.TextBoxFor(m=>m.num1)
+    <br/>
+    <span>num2:</span> @Html.TextBoxFor(m=>m.num2)
+    <br/>
+
+    <span>Add:</span>@Html.RadioButtonFor(m=>m.caltype,"add")
+    <br/>
+    <span>Sub</span> @Html.RadioButtonFor(m=>m.caltype,"sub")
+    <br/>
+    <span>Mul</span> @Html.RadioButtonFor(m=>m.caltype,"mul")
+
+    <br/>
+    <input type ="submit" value="OK"/>
+}
+
+<hr/>
+<h4>Calculation Result</h4>
+<b>Result:</b> @ViewBag.res
+<br/>

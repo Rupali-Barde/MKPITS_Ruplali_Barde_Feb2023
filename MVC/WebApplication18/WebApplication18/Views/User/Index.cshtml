@@ -1,0 +1,27 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    
+}
+
+
+@model WebApplication18.Models.User
+@using (Html.BeginForm("Index","User",FormMethod.Post))
+{
+    <b>Want Additional Benefits:</b>
+    <br/>
+    <span>Tea:</span> @Html.CheckBoxFor(m=>m.Tea,true)
+    <span>Loundry:</span>@Html.CheckBoxFor(m=>m.Loundry,false)
+    <span>Breakfast:</span>@Html.CheckBoxFor(m=>m.Breakfast,false)
+
+    <input type="submit" value="Ok" />
+
+}
+
+<h4>You Selected</h4>
+<b> Tea:</b>@ViewBag.Tea
+<br/>
+<b> Loundry:</b> @ViewBag.Loundry
+<br/>
+<b>Breakfast</b>@ViewBag.Breakfast

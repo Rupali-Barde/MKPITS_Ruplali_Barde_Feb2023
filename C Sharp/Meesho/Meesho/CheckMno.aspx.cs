@@ -55,6 +55,21 @@ namespace Meesho
             {
                 Label1.Text = "Invalid OTP";
             }
+
+            //code to insert data into cart table
+            query = "insert into Cart values(@CartId,@ProdId,@ProdPrice,@Qty,@SessionId)";
+            command = new SqlCommand(query, con);
+            con.Open();
+           // command.Parameters.AddWithValue("@CartID",CartId);
+            command.Parameters.AddWithValue("@ProdId",ProdId);
+            command.Parameters.AddWithValue("@ProdPrice", ProdPrice);
+            command.Parameters.AddWithValue("@Qty",Qty);
+            command.Parameters.AddWithValue("SessionId",SessionId);
+
+            //con.Open();
+            command.ExecuteNonQuery();
+            con.Close();
+
         }
     }
 }
