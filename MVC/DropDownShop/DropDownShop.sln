@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.6.33723.286
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DropDownShop", "DropDownShop\DropDownShop.csproj", "{6BB9069D-E58C-4D59-B50A-DF543BE96F2C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6BB9069D-E58C-4D59-B50A-DF543BE96F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6BB9069D-E58C-4D59-B50A-DF543BE96F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6BB9069D-E58C-4D59-B50A-DF543BE96F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6BB9069D-E58C-4D59-B50A-DF543BE96F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {2CB6B5E8-6ED6-4F74-9470-A8C2CB0AB164}
+	EndGlobalSection
+EndGlobal

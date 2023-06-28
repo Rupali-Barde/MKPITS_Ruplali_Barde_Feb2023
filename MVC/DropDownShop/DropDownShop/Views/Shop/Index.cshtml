@@ -1,0 +1,30 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+@using DropDownShop.Models
+@model UserShop
+<br/><br/>
+@using (Html.BeginForm("Index","Shop",FormMethod.Post))
+{
+  <b>Enter Customer Name:</b>@Html.TextBoxFor(m => m.Customername)<br/><br/>
+
+    <b>Enter Order No:</b>@Html.TextBoxFor(m=>m.Orderno)<br/><br/>
+   <b>Select Product: </b> @Html.DropDownListFor(m=>m.GetProdName,new SelectList(Enum.GetValues(typeof(Prodname))),"Select Product")<br/><br/>
+   <b> Enter Price:</b> @Html.TextBoxFor(m=>m.Price)<br/><br/>
+    <b> Enter Quantity:</b>@Html.TextBoxFor(m=>m.Quantity)<br/><br/>
+
+    <input type="Submit" value="Ok" />
+
+
+}
+<h3> Product Details</h3>
+<b> Customer Name: </b>@ViewBag.Customername<br/><br/>
+<b>Oredrno: </b>@ViewBag.Orderno<br/><br/>
+<b>Product Name: </b>@ViewBag.Prodname<br/><br/>
+<b>Price: </b> @ViewBag.Totalprice<br/><br/>
+<b>Quantity: </b> @ViewBag.Quantity<br/><br/>
+
+}
+
