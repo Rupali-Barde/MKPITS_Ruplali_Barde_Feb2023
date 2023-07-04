@@ -1,0 +1,51 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+
+}
+<script src="~/Scripts/jquery.validate.min.js"></script>
+
+<script src="~/Scripts/jquery-1.10.2.min.js"></script>
+@model Annotation2.Models.StudentDetails
+<h2>Student Details</h2>
+@using (Html.BeginForm("StudentDetails","Annotation", FormMethod.Post))
+{
+   <ol>
+    <li>
+    @Html.LabelFor(m => m.Name)
+    @Html.TextBoxFor(m => m.Name)
+    @Html.ValidationMessageFor(m => m.Name)
+    </li>
+    <li>
+    @Html.LabelFor(m => m.Email)
+    @Html.TextBoxFor(m => m.Email)
+    @Html.ValidationMessageFor(m => m.Email)
+    </li>
+
+    <li>
+            @Html.LabelFor(m => m.ConfirmEmail)
+            @Html.TextBoxFor(m => m.ConfirmEmail)
+            @Html.ValidationMessageFor(m => m.ConfirmEmail)
+    </li>
+
+     <li>
+            @Html.LabelFor(m => m.Age)
+            @Html.TextBoxFor(m => m.Age)
+            @Html.ValidationMessageFor(m => m.Age)
+        </li>
+     
+   </ol>
+
+    <br/>
+        <input type="submit" value="Save Student Details" />
+}
+    <h3 style="color:green">Student Details</h3>
+    <h4 style="color:green">
+        
+            Name: @ViewBag.name<br />
+            Email:@ViewBag.email<br/>
+            Age:@ViewBag.age<br/>
+        
+    </h4>
+        

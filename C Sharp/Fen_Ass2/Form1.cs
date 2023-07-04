@@ -120,7 +120,7 @@ namespace Fen_Ass2
             string result1 = CourseRegistration.saveTableRegAddress(Convert.ToInt32(comboBox1.SelectedValue), Convert.ToInt32(comboBox2.SelectedValue), Convert.ToInt32(comboBox3.SelectedValue));
             MessageBox.Show(result);
 
-            string result2 = CourseRegistration.SaveTableFeeDetail(Convert.ToDouble(textBox2.Text), FixedPanel, Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), dateTimePicker1.value);
+            string result2 = CourseRegistration.saveTableFeeDetail(Convert.ToDouble(textBox2.Text),  Convert.ToInt32(textBox3.Text), Convert.ToInt32(textBox4.Text), dateTimePicker1.Value);
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)

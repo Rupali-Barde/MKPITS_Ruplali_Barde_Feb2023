@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.6.33723.286
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUp Form", "SignUp Form\SignUp Form.csproj", "{D7BA4EF0-D370-42E7-9048-35BCC9E8DB6D}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignUp Form", "SignUp Form\SignUp Form.csproj", "{8C126426-7937-4F8E-ACF0-20A845894E72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D7BA4EF0-D370-42E7-9048-35BCC9E8DB6D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D7BA4EF0-D370-42E7-9048-35BCC9E8DB6D}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D7BA4EF0-D370-42E7-9048-35BCC9E8DB6D}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D7BA4EF0-D370-42E7-9048-35BCC9E8DB6D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8C126426-7937-4F8E-ACF0-20A845894E72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C126426-7937-4F8E-ACF0-20A845894E72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C126426-7937-4F8E-ACF0-20A845894E72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C126426-7937-4F8E-ACF0-20A845894E72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {B5E2776C-71A0-4F9B-B9B0-A5027EA63A24}
+		SolutionGuid = {D9D55C37-3FCD-4A22-8A77-441997F852BB}
 	EndGlobalSection
 EndGlobal

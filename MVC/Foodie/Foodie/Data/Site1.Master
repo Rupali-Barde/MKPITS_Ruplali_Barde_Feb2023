@@ -1,0 +1,71 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Foodie.Data.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 100%;
+        }
+        .auto-style2 {
+            width: 423px;
+            color: #996633;
+            text-align: center;
+        }
+        .auto-style3 {
+            width: 165px;
+            text-align: center;
+        }
+        .auto-style6 {
+            width: 173px;
+            text-align: center;
+        }
+        .auto-style8 {
+            color: #FF9933;
+            width: 317px;
+        }
+        .auto-style9 {
+            color: #000000;
+        }
+        .auto-style10 {
+            width: 184px;
+            text-align: center;
+        }
+        .auto-style11 {
+            width: 115px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <table class="auto-style1">
+                <tr>
+                    <td class="auto-style2"><h2 class="auto-style8">Chai Sutta Bar</h2></td>
+                    <td class="auto-style3">
+                        <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Data/Home.aspx" CssClass="auto-style9">Home</asp:HyperLink>
+                    </td>
+                    <td class="auto-style6">
+                        <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Data/AboutUs.aspx" CssClass="auto-style9">About Us</asp:HyperLink>
+                    </td>
+                    <td class="auto-style10">
+                        <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Data/OurSpeciality.aspx" CssClass="auto-style9">Our Speciality</asp:HyperLink>
+                    </td>
+                    <td class="auto-style11">
+                        <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Data/Contact.aspx" CssClass="auto-style9">Contact</asp:HyperLink>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </form>
+    <p>
+        @ChaiSuttaBarCafe</p>
+</body>
+</html>

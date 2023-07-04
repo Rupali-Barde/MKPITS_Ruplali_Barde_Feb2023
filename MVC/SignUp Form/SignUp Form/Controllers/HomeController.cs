@@ -12,12 +12,12 @@ namespace SignUp_Form.Controllers
         {
             _logger = logger;
         }
-        
+
         public IActionResult Index()
         {
             return View();
         }
-        [HttpPost]
+
         public IActionResult Privacy()
         {
             return View();
