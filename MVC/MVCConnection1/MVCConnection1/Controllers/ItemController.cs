@@ -5,15 +5,13 @@ namespace MVCConnection1.Controllers
 {
     public class ItemController : Controller
     {
+        //Get Item
         public IActionResult Index()
         {
             return View();
         }
         [HttpGet]
-        public IActionResult Create()
-        {
-            return View();
-        }
+        
         //post Method
         [HttpPost]
         public IActionResult Create (ItemModel ilist)
@@ -29,6 +27,7 @@ namespace MVCConnection1.Controllers
             }
             return View();
         }
-
+        
+        
     }
 }

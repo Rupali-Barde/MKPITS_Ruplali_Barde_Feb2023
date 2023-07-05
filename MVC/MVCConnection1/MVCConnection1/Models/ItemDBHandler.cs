@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data;
 using System.Data.SqlClient;
 using System.Configuration;
+using System.Collections;
 
 namespace MVCConnection1.Models
 {
@@ -35,9 +36,37 @@ namespace MVCConnection1.Models
                 return false;
             }
         }
-            
+
+        //Code To View All Records Of Table
+        public List<ItemModel> GetItemList()
+        {
+            connection();
+            List<ItemModel> ilist = new List<ItemModel>();
+            string query = "Select * from ItemList";
+            SqlCommand cmd = new SqlCommand(query, con);
+            SqlDataAdapter adapter = new SqlDataAdapter(cmd);
+            DataTable dt = new DataTable();
+
+            con.Open();
+            adapter.Fill(dt);
+            con.Close();
+
+            foreach (DataRow dr in dt.Rows)
+            {
+                ilist.Add( new ItemModel 
+
+                {
+                    Id = Convert.ToInt32(dr["id"]),
+                    Name = Convert.ToString(dr["Name"]),
+                    Category = Convert.ToString(dr["Category"]),
+                    Price = Convert.ToDecimal(dr["Price"])
+                });
+            }
+            return ilist;
+        }
+    }
 
         
 
-    }
+   
 }
