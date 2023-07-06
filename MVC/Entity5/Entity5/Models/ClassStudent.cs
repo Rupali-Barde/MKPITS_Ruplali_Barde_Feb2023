@@ -1,0 +1,17 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+
+namespace Entity5.Models
+{
+    public class ClassStudent
+    {
+
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public string Course{ get; set;}
+        public int Age { get; set;} 
+    }
+
+}
