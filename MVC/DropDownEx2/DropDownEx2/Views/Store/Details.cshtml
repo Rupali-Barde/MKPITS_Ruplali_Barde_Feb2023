@@ -1,0 +1,50 @@
+﻿
+<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+<script type="text/javascript">
+        $(document).ready(function () {
+
+        $("#Category").change(function ()
+        {
+            $("#Product").empty();
+            $.ajax({
+                type: 'POST',
+                url: '@Url.Action("getProduct")',
+                dataType: 'json',
+                data: { id: $("#Category").val() },
+                success: function (Product) {
+
+                    $.each(Product, function (i, Product) {
+                        $("#Product").append('<option value="'+ Product.Value + '">'+ Product.Text + '</option>');
+                    });
+                },
+                error: function (ex) {
+                    alert('Failed.' + ex);
+                }
+            });
+            return false;
+        })
+    });
+</script>
+
+@model DropDownEx2.Models.Registration
+<div class="form-group">
+    @Html.LabelFor(model => model.Category, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownListFor(model => model.Category, ViewBag.category as List<SelectListItem>, new { style = "width: 200px;" })
+
+        @Html.ValidationMessageFor(model => model.Category, "", new { @class = "text-danger" })
+    </div>
+</div>
+
+<div class="form-group">
+    @Html.LabelFor(model => model.Product, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownListFor(model => model.Product, new SelectList(string.Empty, "Value", "Text"), "--Select Product--", new { style = "width:200px" })
+
+        @Html.ValidationMessageFor(model => model.Product, "", new { @class = "text-danger" })
+    </div>
+    </div>
+
+
+
+

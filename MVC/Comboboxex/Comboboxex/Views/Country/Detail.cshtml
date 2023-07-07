@@ -1,0 +1,40 @@
+﻿<script src="~/Scripts/jquery-3.7.0.min.js"></script>
+    <script type="text/javascript">
+
+    $(document).ready(function () {
+
+    $("#State").change(function ()
+    {
+    $("#City").empty();
+    $.ajax({
+    type: 'POST',
+    url: '@Url.Action("getcity")',
+    dataType: 'json',
+    data: { id: $("#State").val() },
+    success: function (city) {
+
+    $.each(city, function (i, city) {
+    $("#City").append('<option value="'
+    + city.Value + '">'
+    + city.Text + '</option>');
+
+    });
+    },
+    error: function (ex) {
+    alert('Failed.' + ex);
+    }
+    });
+    return false;
+    })
+    });
+    </script>
+
+@model Comboboxex.Models.DataModel1
+<div class="form-group">
+    @Html.LabelFor(model => model.tblStates, htmlAttributes: new { @class = "control-label col-md-2" })
+    <div class="col-md-10">
+        @Html.DropDownListFor(model => model.tblStates, ViewBag.state as List<SelectListItem>, new { style = "width:200px;" })
+
+            @Html.ValidationMessageFor(model => model.tblStates, "", new { @class = "text-danger" })
+    </div>
+</div>
