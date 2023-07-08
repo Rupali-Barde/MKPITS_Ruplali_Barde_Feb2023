@@ -1,0 +1,45 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+    
+         <p><b>Teacher List</b> </p> 
+@using PartialViewEx1 
+@model dynamic 
+    
+<table>
+    <tr>
+        <th> Id</th>
+        <th>Code</th>
+        <th>Name</th>
+    </tr>
+
+ @foreach(PartialViewEx1.Models.Teacher teacher in Model.Teacher)
+  {
+                <tr>
+                    <td>@teacher.TeacherId</td>
+                    <td>@teacher.Code</td>
+                    <td>@teacher.Name</td>
+                </tr>
+  }
+</table>
+
+<p><b> Student List</b></p>
+
+<table>
+    <tr>
+        <th>ID</th>
+        <th>Code</th>
+        <th>Name</th>
+        <th>Enrollment No</th>
+    </tr>
+    @foreach (PartialViewEx1.Models.Student student in Model.Student)
+            {
+                <tr>
+                    <td>@student.StudentId</td>
+                    <td>@student.Code</td>
+                    <td>@student.Name</td>
+                    <td>@student.EnrollmentNo</td>
+                </tr>
+            }
+</table>
